@@ -5,6 +5,8 @@ from pyflow import Workflow
 
 def bookmark_args(workflow: Workflow) -> Tuple[str, str, str]:
     try:
-        return " ".join(workflow.args).split(" / ")
+        name, location, type_ = " ".join(workflow.args).split(" / ")
+
+        return name, location, type_
     except:
-        raise ValueError(f"Missing parameters: [name] / [location] / [type]")
+        raise ValueError(f"Missing parameters: [name] / [location]")
