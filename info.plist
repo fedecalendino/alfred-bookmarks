@@ -21,11 +21,37 @@
 				<false/>
 			</dict>
 		</array>
+		<key>515E9464-E50C-45A6-9AC3-17935F465BE8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DA422AF3-A90B-40A1-8ACE-F75E4620F797</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>5C7393EA-A5B6-4E63-BB42-84802E331C08</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>D27E695D-5DE3-44E1-8A0F-8EE1727A99CB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5CD848EF-FE82-4A7E-8972-9D4B38C91EC8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DA422AF3-A90B-40A1-8ACE-F75E4620F797</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -315,7 +341,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>{var:keyword_add_website}</string>
+				<string>{var:keyword_website}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -333,7 +359,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>{var:keyword_add_website} [name] / [url]</string>
+				<string>{var:keyword_website} [name] / [url]</string>
 				<key>title</key>
 				<string>Bookmark a website</string>
 				<key>type</key>
@@ -345,6 +371,104 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>07996430-DCC3-41A8-A2FD-041D15BC3EB2</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:keyword_youtube_channel}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>/usr/bin/python3 ./dist/add.py $@ / youtube_channel</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>{var: keyword_youtube_channel} [name] / [channel_id]</string>
+				<key>title</key>
+				<string>Bookmark a Youtube channel</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>5CD848EF-FE82-4A7E-8972-9D4B38C91EC8</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:keyword_file}</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>/usr/bin/python3 ./dist/add.py $@ / file</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>{var:keyword_file} [name] / [path]</string>
+				<key>title</key>
+				<string>Bookmark a file</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>D8912F76-17ED-4109-822B-2FEE2072DC02</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -387,7 +511,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>{var:keyword_add_file}</string>
+				<string>{var:keyword_youtube_stream}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -399,15 +523,15 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>/usr/bin/python3 ./dist/add.py $@ / file</string>
+				<string>/usr/bin/python3 ./dist/add.py $@ / youtube_stream</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>{var:keyword_add_file} [name] / [path]</string>
+				<string>{var: keyword_youtube_stream} [name] / [video-id]</string>
 				<key>title</key>
-				<string>Bookmark a file</string>
+				<string>Bookmark a Youtube stream</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -416,7 +540,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>D8912F76-17ED-4109-822B-2FEE2072DC02</string>
+			<string>515E9464-E50C-45A6-9AC3-17935F465BE8</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -436,7 +560,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>{var:keyword_add_folder}</string>
+				<string>{var:keyword_folder}</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -454,7 +578,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>{var:keyword_add_file} [name] / [path]</string>
+				<string>{var:keyword_file} [name] / [path]</string>
 				<key>title</key>
 				<string>Bookmark a folder</string>
 				<key>type</key>
@@ -488,12 +612,26 @@
 			<key>ypos</key>
 			<real>15</real>
 		</dict>
+		<key>515E9464-E50C-45A6-9AC3-17935F465BE8</key>
+		<dict>
+			<key>xpos</key>
+			<real>190</real>
+			<key>ypos</key>
+			<real>425</real>
+		</dict>
 		<key>5C7393EA-A5B6-4E63-BB42-84802E331C08</key>
 		<dict>
 			<key>xpos</key>
 			<real>345</real>
 			<key>ypos</key>
 			<real>155</real>
+		</dict>
+		<key>5CD848EF-FE82-4A7E-8972-9D4B38C91EC8</key>
+		<dict>
+			<key>xpos</key>
+			<real>190</real>
+			<key>ypos</key>
+			<real>305</real>
 		</dict>
 		<key>805DEE24-8480-453A-9C4D-6AAB6BBFF953</key>
 		<dict>
@@ -526,7 +664,7 @@
 		<key>DA422AF3-A90B-40A1-8ACE-F75E4620F797</key>
 		<dict>
 			<key>xpos</key>
-			<real>265</real>
+			<real>445</real>
 			<key>ypos</key>
 			<real>370</real>
 		</dict>
@@ -587,7 +725,7 @@
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
-			<string>keyword_add_website</string>
+			<string>keyword_website</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -608,7 +746,7 @@
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
-			<string>keyword_add_file</string>
+			<string>keyword_file</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -629,11 +767,53 @@
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
-			<string>keyword_add_folder</string>
+			<string>keyword_folder</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>+channel</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Keyword for bookmarking a Youtube channel.</string>
+			<key>label</key>
+			<string>Add a Youtube channel</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>keyword_youtube_channel</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>+stream</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Keyword for bookmarking a Youtube stream.</string>
+			<key>label</key>
+			<string>Add a Youtube stream</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>keyword_youtube_stream</string>
 		</dict>
 	</array>
 	<key>version</key>
-	<string>0.1.0</string>
+	<string>0.1.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/fedecalendino/alfred-bookmarks</string>
 </dict>

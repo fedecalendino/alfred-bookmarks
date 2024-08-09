@@ -3,7 +3,7 @@ import sys
 from pyflow import Workflow
 
 import parse
-from constants import FILE, FOLDER, WEBSITE
+import constants
 
 
 def format_name(name: str) -> str:
@@ -17,12 +17,16 @@ def format_type(type_: str) -> str:
 def format_location(location: str, type_: str) -> str:
     location = location.strip()
 
-    if type_ == WEBSITE:
+    if type_ == constants.WEBSITE:
         if not location.startswith("http"):
             location = f"https://{location}"
-    elif type_ in (FILE, FOLDER):
+    elif type_ in (constants.FILE, constants.FOLDER):
         if not location.startswith("file://"):
             location = f"file://{location}"
+    elif type_ == constants.YOUTUBE_CHANNEL:
+        location = f"https://www.youtube.com/@{location}/streams"
+    elif type_ == constants.YOUTUBE_STREAM:
+        location = f"https://www.youtube.com/watch?v={location}"
 
     return location
 
