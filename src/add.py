@@ -6,16 +6,10 @@ import parse
 import constants
 
 
-def format_name(name: str) -> str:
-    return name.strip()
-
-
-def format_type(type_: str) -> str:
-    return type_.strip()
-
-
-def format_location(location: str, type_: str) -> str:
+def format_bookmark(name: str, location: str, type_: str) -> str:
+    name = name.strip()
     location = location.strip()
+    type_ = type_.strip()
 
     if type_ == constants.WEBSITE:
         if not location.startswith("http"):
@@ -28,17 +22,15 @@ def format_location(location: str, type_: str) -> str:
     elif type_ == constants.YOUTUBE_STREAM:
         location = f"https://www.youtube.com/watch?v={location}"
     elif type_ == constants.SUBREDDIT:
+        name = f"/r/{name}"
         location = f"https://www.reddit.com/r/{location}"
 
-    return location
+    return name, location, type_
 
 
 def main(workflow: Workflow):
     name, location, type_ = parse.bookmark_args(workflow)
-
-    name = format_name(name)
-    type_ = format_type(type_)
-    location = format_location(location, type_)
+    name, location, type_ = format_bookmark(name, location, type_)
 
     workflow.new_item(
         title="Do you want to bookmark `{name}`?".format(
