@@ -27,6 +27,8 @@ def format_location(location: str, type_: str) -> str:
         location = f"https://www.youtube.com/@{location}/streams"
     elif type_ == constants.YOUTUBE_STREAM:
         location = f"https://www.youtube.com/watch?v={location}"
+    elif type_ == constants.SUBREDDIT:
+        location = f"https://www.reddit.com/r/{location}"
 
     return location
 

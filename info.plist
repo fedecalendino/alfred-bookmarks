@@ -87,6 +87,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>9FD0E96F-2F51-4F8E-BB1F-80C972C3F33B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>DA422AF3-A90B-40A1-8ACE-F75E4620F797</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>D28D85AA-8D56-43B7-B4F2-9E77E4E703D6</key>
 		<array>
 			<dict>
@@ -341,7 +354,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>{var:keyword_website}</string>
+				<string>{var:add_keyword} website</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -359,9 +372,9 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>{var:keyword_website} [name] / [url]</string>
+				<string>{var:add_keyword} website [name] / [url]</string>
 				<key>title</key>
-				<string>Bookmark a website</string>
+				<string>🌐 bookmark a website</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -390,7 +403,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>{var:keyword_youtube_channel}</string>
+				<string>{var:add_keyword} channel</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -408,9 +421,9 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>{var: keyword_youtube_channel} [name] / [channel_id]</string>
+				<string>{var:add_keyword} channel [name] / [channel_id]</string>
 				<key>title</key>
-				<string>Bookmark a Youtube channel</string>
+				<string>📺 bookmark a youtube channel</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -439,7 +452,56 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>{var:keyword_file}</string>
+				<string>{var:add_keyword} stream</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>/usr/bin/python3 ./dist/add.py $@ / youtube_stream</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>{var:add_keyword} stream [name] / [video-id]</string>
+				<key>title</key>
+				<string>🔴 bookmark a youtube stream</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>515E9464-E50C-45A6-9AC3-17935F465BE8</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>{var:add_keyword} file</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -457,9 +519,9 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>{var:keyword_file} [name] / [path]</string>
+				<string>{var:add_keyword} file [name] / [path]</string>
 				<key>title</key>
-				<string>Bookmark a file</string>
+				<string>📄 bookmark a file</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -511,7 +573,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>{var:keyword_youtube_stream}</string>
+				<string>{var:add_keyword} subreddit</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -523,15 +585,15 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>/usr/bin/python3 ./dist/add.py $@ / youtube_stream</string>
+				<string>/usr/bin/python3 ./dist/add.py $@ / $@ / subreddit</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>{var: keyword_youtube_stream} [name] / [video-id]</string>
+				<string>{var:add_keyword} subreddit [name]</string>
 				<key>title</key>
-				<string>Bookmark a Youtube stream</string>
+				<string>👽 bookmark a subreddit</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -540,7 +602,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>515E9464-E50C-45A6-9AC3-17935F465BE8</string>
+			<string>9FD0E96F-2F51-4F8E-BB1F-80C972C3F33B</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -560,7 +622,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>{var:keyword_folder}</string>
+				<string>{var:add_keyword} folder</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -578,9 +640,9 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>{var:keyword_file} [name] / [path]</string>
+				<string>{var:add_keyword} folder [name] / [path]</string>
 				<key>title</key>
-				<string>Bookmark a folder</string>
+				<string>📁 bookmark a folder</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -615,9 +677,9 @@
 		<key>515E9464-E50C-45A6-9AC3-17935F465BE8</key>
 		<dict>
 			<key>xpos</key>
-			<real>190</real>
+			<real>175</real>
 			<key>ypos</key>
-			<real>425</real>
+			<real>365</real>
 		</dict>
 		<key>5C7393EA-A5B6-4E63-BB42-84802E331C08</key>
 		<dict>
@@ -629,9 +691,9 @@
 		<key>5CD848EF-FE82-4A7E-8972-9D4B38C91EC8</key>
 		<dict>
 			<key>xpos</key>
-			<real>190</real>
+			<real>175</real>
 			<key>ypos</key>
-			<real>305</real>
+			<real>245</real>
 		</dict>
 		<key>805DEE24-8480-453A-9C4D-6AAB6BBFF953</key>
 		<dict>
@@ -639,6 +701,13 @@
 			<real>240</real>
 			<key>ypos</key>
 			<real>100</real>
+		</dict>
+		<key>9FD0E96F-2F51-4F8E-BB1F-80C972C3F33B</key>
+		<dict>
+			<key>xpos</key>
+			<real>175</real>
+			<key>ypos</key>
+			<real>485</real>
 		</dict>
 		<key>D27E695D-5DE3-44E1-8A0F-8EE1727A99CB</key>
 		<dict>
@@ -659,12 +728,12 @@
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>370</real>
+			<real>365</real>
 		</dict>
 		<key>DA422AF3-A90B-40A1-8ACE-F75E4620F797</key>
 		<dict>
 			<key>xpos</key>
-			<real>445</real>
+			<real>440</real>
 			<key>ypos</key>
 			<real>370</real>
 		</dict>
@@ -680,7 +749,7 @@
 			<key>xpos</key>
 			<real>30</real>
 			<key>ypos</key>
-			<real>490</real>
+			<real>485</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
@@ -698,9 +767,9 @@
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Keyword listing your bookmarks.</string>
+			<string></string>
 			<key>label</key>
-			<string>Bookmark list</string>
+			<string>List all bookmarks</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
@@ -710,7 +779,7 @@
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>+web</string>
+				<string>+</string>
 				<key>placeholder</key>
 				<string></string>
 				<key>required</key>
@@ -719,97 +788,13 @@
 				<true/>
 			</dict>
 			<key>description</key>
-			<string>Keyword for bookmarking a website.</string>
+			<string></string>
 			<key>label</key>
-			<string>Add a website</string>
+			<string>Add a bookmark</string>
 			<key>type</key>
 			<string>textfield</string>
 			<key>variable</key>
-			<string>keyword_website</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string>+file</string>
-				<key>placeholder</key>
-				<string></string>
-				<key>required</key>
-				<true/>
-				<key>trim</key>
-				<true/>
-			</dict>
-			<key>description</key>
-			<string>Keyword for bookmarking a file.</string>
-			<key>label</key>
-			<string>Add a file</string>
-			<key>type</key>
-			<string>textfield</string>
-			<key>variable</key>
-			<string>keyword_file</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string>+folder</string>
-				<key>placeholder</key>
-				<string></string>
-				<key>required</key>
-				<true/>
-				<key>trim</key>
-				<true/>
-			</dict>
-			<key>description</key>
-			<string>Keyword for bookmarking a folder.</string>
-			<key>label</key>
-			<string>Add a folder</string>
-			<key>type</key>
-			<string>textfield</string>
-			<key>variable</key>
-			<string>keyword_folder</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string>+channel</string>
-				<key>placeholder</key>
-				<string></string>
-				<key>required</key>
-				<true/>
-				<key>trim</key>
-				<true/>
-			</dict>
-			<key>description</key>
-			<string>Keyword for bookmarking a Youtube channel.</string>
-			<key>label</key>
-			<string>Add a Youtube channel</string>
-			<key>type</key>
-			<string>textfield</string>
-			<key>variable</key>
-			<string>keyword_youtube_channel</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>default</key>
-				<string>+stream</string>
-				<key>placeholder</key>
-				<string></string>
-				<key>required</key>
-				<true/>
-				<key>trim</key>
-				<true/>
-			</dict>
-			<key>description</key>
-			<string>Keyword for bookmarking a Youtube stream.</string>
-			<key>label</key>
-			<string>Add a Youtube stream</string>
-			<key>type</key>
-			<string>textfield</string>
-			<key>variable</key>
-			<string>keyword_youtube_stream</string>
+			<string>add_keyword</string>
 		</dict>
 	</array>
 	<key>version</key>

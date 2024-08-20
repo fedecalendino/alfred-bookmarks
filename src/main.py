@@ -2,6 +2,7 @@ import sys
 
 from pyflow import Workflow
 
+from constants import EMOJIS
 from db import DB
 
 
@@ -17,8 +18,10 @@ def main(workflow: Workflow):
         )
 
     for bookmark in bookmarks:
+        emoji = EMOJIS[bookmark.type]
+
         workflow.new_item(
-            title=bookmark.name,
+            title=f"{emoji} {bookmark.name}",
             subtitle=bookmark.location,
             arg=f"open {bookmark.location}",
             copytext=bookmark.location,
