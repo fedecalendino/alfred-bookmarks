@@ -1,7 +1,7 @@
 from apps import APPS
 
 
-SEPARATOR = " || "
+SEPARATOR = "||"
 
 
 def parse(args: list[str]) -> tuple[str, str, str, str]:
@@ -13,12 +13,10 @@ def parse(args: list[str]) -> tuple[str, str, str, str]:
 
     split = args[2].split(SEPARATOR)
 
-    if len(split) == 1:
-        name, arg = split[0], split[0]
-    elif len(split) == 2:
+    if len(split) == 2:
         name, arg = split[0], split[1]
     else:
-        raise ValueError(f"Invalid format: {args[2]}")
+        raise ValueError(f"Invalid format, expected '[name] {SEPARATOR} [location]'")
 
     return app.strip(), type.strip(), name.strip(), arg.strip()
 
