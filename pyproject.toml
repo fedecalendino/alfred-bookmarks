@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Bookmarks"
-version = "0.2.0"
+version = "0.3.0"
 description = "Store bookmarks on Alfred"
 documentation = "https://github.com/fedecalendino/alfred-bookmarks/blob/main/README.md"
 homepage = "https://github.com/fedecalendino/alfred-bookmarks"

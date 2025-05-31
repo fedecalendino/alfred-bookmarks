@@ -3,7 +3,15 @@ import sys
 from pyflow import Workflow
 
 import parse
-import constants
+from constants import (
+    WEBSITE,
+    FILE,
+    FOLDER,
+    YOUTUBE_CHANNEL,
+    YOUTUBE_STREAM,
+    REDDIT_SUBREDDIT,
+    GITHUB_REPOSITORY,
+)
 
 
 def format_bookmark(name: str, location: str, type_: str) -> str:
@@ -11,19 +19,22 @@ def format_bookmark(name: str, location: str, type_: str) -> str:
     location = location.strip()
     type_ = type_.strip()
 
-    if type_ == constants.WEBSITE:
+    if type_ == WEBSITE:
         if not location.startswith("http"):
             location = f"https://{location}"
-    elif type_ in (constants.FILE, constants.FOLDER):
+    elif type_ in (FILE, FOLDER):
         if not location.startswith("file://"):
             location = f"file://{location}"
-    elif type_ == constants.YOUTUBE_CHANNEL:
-        location = f"https://www.youtube.com/@{location}/streams"
-    elif type_ == constants.YOUTUBE_STREAM:
-        location = f"https://www.youtube.com/watch?v={location}"
-    elif type_ == constants.SUBREDDIT:
+    elif type_ == YOUTUBE_CHANNEL:
+        location = f"https://youtube.com/@{location}/streams"
+    elif type_ == YOUTUBE_STREAM:
+        location = f"https://youtube.com/watch?v={location}"
+    elif type_ == REDDIT_SUBREDDIT:
         name = f"/r/{name}"
-        location = f"https://www.reddit.com/r/{location}"
+        location = f"https://reddit.com/r/{location}"
+    elif type_ == GITHUB_REPOSITORY:
+        name = f"{name}"
+        location = f"https://github.com/{location}"
 
     return name, location, type_
 
