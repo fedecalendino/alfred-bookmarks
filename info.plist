@@ -34,19 +34,6 @@
 				<false/>
 			</dict>
 		</array>
-		<key>515E9464-E50C-45A6-9AC3-17935F465BE8</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>DA422AF3-A90B-40A1-8ACE-F75E4620F797</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>5C7393EA-A5B6-4E63-BB42-84802E331C08</key>
 		<array>
 			<dict>
@@ -379,7 +366,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>/usr/bin/python3 ./dist/add.py "$@ || website"</string>
+				<string>/usr/bin/python3 ./dist/add.py browser website "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -428,7 +415,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>/usr/bin/python3 ./dist/add.py "$@ || youtube_channel"</string>
+				<string>/usr/bin/python3 ./dist/add.py youtube channel "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -465,7 +452,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>{var:add_keyword} stream</string>
+				<string>{var:add_keyword} repo</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -477,15 +464,15 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>/usr/bin/python3 ./dist/add.py "$@ || youtube_stream"</string>
+				<string>/usr/bin/python3 ./dist/add.py github repository "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>{var:add_keyword} stream [name] || [video-id]</string>
+				<string>{var:add_keyword} repository [name] || [organization]/[repository]</string>
 				<key>title</key>
-				<string>🔴 bookmark a youtube stream</string>
+				<string>🐙 bookmark a github repository</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -494,7 +481,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>515E9464-E50C-45A6-9AC3-17935F465BE8</string>
+			<string>3877FDAA-7B13-44F9-A870-6EF2234E0625</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -526,7 +513,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>/usr/bin/python3 ./dist/add.py "$@ || file"</string>
+				<string>/usr/bin/python3 ./dist/add.py files file "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -586,7 +573,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>{var:add_keyword} repo</string>
+				<string>{var:add_keyword} subreddit</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -598,15 +585,15 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>/usr/bin/python3 ./dist/add.py "$@ || github_repository"</string>
+				<string>/usr/bin/python3 ./dist/add.py reddit subreddit "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string>{var:add_keyword} repository [name] || [organization]/[repository]</string>
+				<string>{var:add_keyword} subreddit [name]</string>
 				<key>title</key>
-				<string>🐙 bookmark a github repository</string>
+				<string>👽 bookmark a subreddit</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -615,7 +602,7 @@
 			<key>type</key>
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
-			<string>3877FDAA-7B13-44F9-A870-6EF2234E0625</string>
+			<string>9FD0E96F-2F51-4F8E-BB1F-80C972C3F33B</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -647,7 +634,7 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>/usr/bin/python3 ./dist/add.py "$@ || folder"</string>
+				<string>/usr/bin/python3 ./dist/add.py files folder "$@"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -665,55 +652,6 @@
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>F9305A44-E023-4F2D-9F38-FF714E3B03E4</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<false/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>{var:add_keyword} subreddit</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<false/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>2</integer>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>script</key>
-				<string>/usr/bin/python3 ./dist/add.py "$@ || reddit_subreddit"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>{var:add_keyword} subreddit [name]</string>
-				<key>title</key>
-				<string>👽 bookmark a subreddit</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>9FD0E96F-2F51-4F8E-BB1F-80C972C3F33B</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -737,13 +675,6 @@
 			<real>15</real>
 		</dict>
 		<key>3877FDAA-7B13-44F9-A870-6EF2234E0625</key>
-		<dict>
-			<key>xpos</key>
-			<real>175</real>
-			<key>ypos</key>
-			<real>485</real>
-		</dict>
-		<key>515E9464-E50C-45A6-9AC3-17935F465BE8</key>
 		<dict>
 			<key>xpos</key>
 			<real>175</real>
@@ -776,7 +707,7 @@
 			<key>xpos</key>
 			<real>175</real>
 			<key>ypos</key>
-			<real>605</real>
+			<real>485</real>
 		</dict>
 		<key>D27E695D-5DE3-44E1-8A0F-8EE1727A99CB</key>
 		<dict>
@@ -867,7 +798,7 @@
 		</dict>
 	</array>
 	<key>version</key>
-	<string>0.3.0</string>
+	<string>0.3.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/fedecalendino/alfred-bookmarks</string>
 </dict>

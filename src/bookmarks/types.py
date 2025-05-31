@@ -1,0 +1,6 @@
+CHANNEL = "channel"
+FILE = "file"
+FOLDER = "folder"
+REPOSITORY = "repository"
+SUBREDDIT = "subreddit"
+WEBSITE = "website"
