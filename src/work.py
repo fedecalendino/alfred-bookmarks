@@ -16,7 +16,7 @@ def parse(args: list[str]) -> tuple[str, str, str, str]:
     if len(split) == 2:
         name, arg = split[0], split[1]
     else:
-        raise ValueError(f"Invalid format, expected '[name] {SEPARATOR} [location]'")
+        name, arg = split[0], split[0]
 
     return app.strip(), type.strip(), name.strip(), arg.strip()
 
